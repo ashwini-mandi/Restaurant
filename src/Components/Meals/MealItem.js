@@ -1,11 +1,17 @@
 import "./MealItem.css";
+import MealItemForm from "./MealItemForm";
 const MealItem = (props) => {
   return (
     <li>
       <div className="meal">
-        <h3>{props.name}</h3>
-        <div className="description">{props.desc}</div>
-        <div className="price">{props.price}</div>
+        <div style={{ display: "flex", justifyContent: "space-between" }}>
+          <div>
+            <h3>{props.name}</h3>
+            <div className="description">{props.desc}</div>
+            <div className="price">{props.price}</div>
+          </div>
+          <MealItemForm />
+        </div>
       </div>
     </li>
   );
